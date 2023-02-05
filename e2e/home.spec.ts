@@ -1,4 +1,3 @@
-
 import { test, expect } from '@playwright/test'
 
 test('should navigate to the about page', async ({ page }) => {
@@ -10,7 +9,7 @@ test('should navigate to the about page', async ({ page }) => {
     await expect(page).toHaveURL('http://localhost:3000/about')
     // The new page should contain an h1 with "About Page"
     await expect(page.locator('h1')).toContainText('About Page')
-})
+  })
 
 test ('Test Mutliple tabs', async ({ browser }) => {
     const context = await browser.newContext();
